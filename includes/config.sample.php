@@ -1,4 +1,5 @@
 <?php
+
 /**
  _  \_/ |\ | /¯¯\ \  / /\    |¯¯) |_¯ \  / /¯¯\ |  |   |´¯|¯` | /¯¯\ |\ |5
  ¯  /¯\ | \| \__/  \/ /--\   |¯¯\ |__  \/  \__/ |__ \_/   |   | \__/ | \|Core.
@@ -27,4 +28,3 @@ $database['tableprefix']   = '%s'; # Prefix de las tablas, es recomendable no mo
 $dbsettings['secretword']  = 'xrvolution_%s'; #Nombre de la Cookie, solo caracteres alphanumericos.
 
 # Favor no cambiar nada en este archivo
-?>
