@@ -1,4 +1,5 @@
 <?php
+
 /* vim: set expandtab sw=4 ts=4 sts=4: */
 /**
  *
@@ -67,7 +68,8 @@ class zipfile
      *
      * @access private
      */
-    function unix2DosTime($unixtime = 0) {
+    function unix2DosTime($unixtime = 0)
+    {
         $timearray = ($unixtime == 0) ? getdate() : getdate($unixtime);
 
         if ($timearray['year'] < 1980) {
@@ -187,6 +189,4 @@ class zipfile
             pack('V', strlen($data)) .              // offset to start of central dir
             "\x00\x00";                             // .zip file comment length
     } // end of the 'file()' method
-
 } // end of the 'zipfile' class
-?>
