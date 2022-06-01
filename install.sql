@@ -21,7 +21,7 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 CREATE TABLE `prefix_aks` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -34,7 +34,7 @@ CREATE TABLE `prefix_aks` (
   `planet_type` enum('1','3') DEFAULT NULL,
   `eingeladen` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_alliance` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -59,7 +59,7 @@ CREATE TABLE `prefix_alliance` (
   KEY `ally_tag` (`ally_tag`),
   KEY `ally_name` (`ally_name`),
   KEY `ally_universe` (`ally_universe`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_banned` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -73,7 +73,7 @@ CREATE TABLE `prefix_banned` (
   `universe` tinyint(3) unsigned NOT NULL,
   KEY `ID` (`id`),
   KEY `universe` (`universe`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_buddy` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -84,7 +84,7 @@ CREATE TABLE `prefix_buddy` (
   `universe` tinyint(3) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `universe` (`universe`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_chat` (
   `messageid` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -97,7 +97,7 @@ CREATE TABLE `prefix_chat` (
   KEY `timestamp` (`timestamp`),
   KEY `ally_id` (`ally_id`),
   KEY `universe` (`universe`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_config`( 
   `uni` int(11) NOT NULL AUTO_INCREMENT,
@@ -190,7 +190,7 @@ CREATE TABLE `prefix_config`(
   `trade_allowed_ships` varchar(255) NOT NULL,
   `trade_charge` varchar(5) NOT NULL,
   PRIMARY KEY (`uni`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `prefix_config` (`uni`, `VERSION`, `users_amount`, `game_speed`, `fleet_speed`, `resource_multiplier`, `halt_speed`, `Fleet_Cdr`, `Defs_Cdr`, `initial_fields`, `bgm_active`, `bgm_file`, `uni_name`, `game_name`, `game_disable`, `close_reason`, `metal_basic_income`, `crystal_basic_income`, `deuterium_basic_income`,  `norio_basic_income`,  `energy_basic_income`, `LastSettedGalaxyPos`, `LastSettedSystemPos`, `LastSettedPlanetPos`, `noobprotection`, `noobprotectiontime`, `noobprotectionmulti`, `forum_url`, `adm_attack`, `debug`, `lang`, `stat`, `stat_level`, `stat_last_update`, `stat_settings`, `stat_update_time`, `stat_last_db_update`, `stats_fly_lock`, `stat_last_banner_update`, `stat_banner_update_time`, `cron_lock`, `ts_modon`, `ts_server`, `ts_tcpport`, `ts_udpport`, `ts_timeout`, `ts_version`, `reg_closed`, `OverviewNewsFrame`, `OverviewNewsText`, `capaktiv`, `cappublic`, `capprivate`, `min_build_time`, `smtp_host`, `smtp_port`, `smtp_user`, `smtp_pass`, `smtp_ssl`, `smtp_sendmail`, `user_valid`, `ftp_server`, `ftp_user_name`, `ftp_user_pass`, `ftp_root_path`, `fb_on`, `fb_apikey`, `fb_skey`, `ga_active`, `ga_key`, `moduls`, `trade_allowed_ships`, `trade_charge`, `mail_active`, `mail_use`, `smail_path`) VALUES
 (1, '1.0', 1, 2500, 2500, 1, 1, 30, 30, 250, 0, '', 'Universo 1', 'xNovaOne', 1, 'El juego se encuentra actualmente cerrado.', 20, 10, 0, 0, 0, 1, 1, 1, 0, 5000, 5, 'http://spaceone.tk', 1, 0, 'es', 0, 2, 1288527583, 1000, 25, 1288860107, 0, 1288860107, 1440, 0, 0, '127.0.0.1', 8767, 51234, 1, 2, 0, 1, 'Bienvenido a xNovaOne, por favor pasate por el foro oficial para que te familiarices con el nuevo entorno y aprendas a desarrollar.', 0, '', '', 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, '', '', '0', '', '1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1;1', '202,208,206,207', '0.3', 0, 0, '/usr/sbin/sendmail');
@@ -206,7 +206,7 @@ CREATE TABLE `prefix_diplo` (
   PRIMARY KEY (`id`),
   KEY `owner_1` (`owner_1`,`owner_2`),
   KEY `universe` (`universe`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_fleets` (
   `fleet_id` bigint(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -248,7 +248,7 @@ CREATE TABLE `prefix_fleets` (
   KEY `fleet_start_id` (`fleet_start_id`),
   KEY `fleet_end_id` (`fleet_end_id`),
   KEY `fleet_universe` (`fleet_universe`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 
 CREATE TABLE `prefix_fleettrades` (
@@ -264,7 +264,7 @@ CREATE TABLE `prefix_fleettrades` (
   `norio_total` double(50,0) unsigned NOT NULL default '0',
   `darkmatter_total` double(50,0) unsigned NOT NULL default '0',
   PRIMARY KEY  (`fleettrade_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_messages` (
   `message_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -283,7 +283,7 @@ CREATE TABLE `prefix_messages` (
   KEY `message_sender` (`message_sender`),
   KEY `message_unread` (`message_unread`),
   KEY `message_universe` (`message_universe`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_news` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -292,7 +292,7 @@ CREATE TABLE `prefix_news` (
   `title` varchar(64) NOT NULL,
   `text` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_notes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -304,7 +304,7 @@ CREATE TABLE `prefix_notes` (
   `universe` tinyint(3) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   KEY `universe` (`universe`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_planets` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -414,14 +414,14 @@ CREATE TABLE `prefix_planets` (
   KEY `id_owner` (`id_owner`),
   KEY `destruyed` (`destruyed`),
   KEY `universe` (`universe`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_rw` (
   `owners` varchar(255) NOT NULL,
   `rid` varchar(32) NOT NULL,
   `time` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`rid`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_session` (
   `sess_id` varchar(32) NOT NULL,
@@ -434,7 +434,7 @@ CREATE TABLE `prefix_session` (
   PRIMARY KEY (`sess_id`),
   UNIQUE KEY `user_id` (`user_id`),
   KEY `user_ip` (`user_ip`,`user_lastactivity`)
-) ENGINE=MEMORY DEFAULT CHARSET=utf8;
+) ENGINE=MEMORY DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_statpoints` (
   `id_owner` int(11) unsigned NOT NULL,
@@ -464,7 +464,7 @@ CREATE TABLE `prefix_statpoints` (
   KEY `stat_type` (`stat_type`),
   KEY `id_owner` (`id_owner`),
   KEY `universe` (`universe`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_supp` (
   `ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -477,7 +477,7 @@ CREATE TABLE `prefix_supp` (
   PRIMARY KEY (`ID`),
   KEY `player_id` (`player_id`),
   KEY `universe` (`universe`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_users` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -583,7 +583,7 @@ CREATE TABLE `prefix_users` (
   KEY `onlinetime` (`onlinetime`),
   KEY `username` (`username`),
   KEY `universe` (`universe`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_topkb` (
   `id_owner1` int(11) unsigned NOT NULL,
@@ -598,7 +598,7 @@ CREATE TABLE `prefix_topkb` (
   PRIMARY KEY (`rid`),
   KEY `gesamtunits` (`gesamtunits`),
   KEY `universe` (`universe`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE `prefix_users_valid` (
   `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
@@ -614,7 +614,7 @@ CREATE TABLE `prefix_users_valid` (
   `universe` tinyint(3) unsigned NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `cle` (`cle`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
