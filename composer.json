@@ -16,5 +16,6 @@
         "ext-gd": "*"
     },
     "require-dev": {
+        "squizlabs/php_codesniffer": "^3.6.0"
     }
 }
