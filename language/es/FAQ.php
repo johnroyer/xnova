@@ -1,23 +1,5 @@
 <?php
 
-/**
- _  \_/ |\ | /¯¯\ \  / /\    |¯¯) |_¯ \  / /¯¯\ |  |   |´¯|¯` | /¯¯\ |\ |5
- ¯  /¯\ | \| \__/  \/ /--\   |¯¯\ |__  \/  \__/ |__ \_/   |   | \__/ | \|Core.
- * @author: Copyright (C) 2011 by Brayan Narvaez (Prinick) developer of xNova Revolution
- * @author web: http://www.bnarvaez.com
- * @link: http://www.xnovarev.com
-
- * @package 2Moons
- * @author Slaver <slaver7@gmail.com>
- * @copyright 2009 Lucky <douglas@crockford.com> (XGProyecto)
- * @copyright 2011 Slaver <slaver7@gmail.com> (Fork/2Moons)
- * @license http://www.gnu.org/licenses/gpl.html GNU GPLv3 License
- * @version 1.3 (2011-01-21)
- * @link http://code.google.com/p/2moons/
-
- * Please do not remove the credits
-*/
-
 $LNG['faq']			= array(
 "<font size=3>¿Qué materias primas hay?</font>" => "Las materias primas principales son de metal, cristal, deuterio y norio. Estos materiales son necesarios para los edificios, la investigación, las naves y la fabricación de las defensas. La energía le permite a sus minas que funcionen al 100%. Si reduces el consumo de energ&iacute; la producci&oacute;n de las minas se reduce.<br>",
 "<font size=3>¿Que es el pequeño número verde debajo de los recursos?  </font>" => "Este número indica el tamaño de los almacenes. Si los almacenes están llenos, tus minas no produciran m&aacute;s recursos.<br>",

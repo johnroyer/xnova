@@ -1,22 +1,5 @@
 <?php
 
-/**
- _  \_/ |\ | /¯¯\ \  / /\    |¯¯) |_¯ \  / /¯¯\ |  |   |´¯|¯` | /¯¯\ |\ |5
- ¯  /¯\ | \| \__/  \/ /--\   |¯¯\ |__  \/  \__/ |__ \_/   |   | \__/ | \|Core.
- * @author: Copyright (C) 2011 by Brayan Narvaez (Prinick) developer of xNova Revolution
- * @link: http://www.xnovarevolution.con.ar
-
- * @package 2Moons
- * @author Slaver <slaver7@gmail.com>
- * @copyright 2009 Lucky <douglas@crockford.com> (XGProyecto)
- * @copyright 2011 Slaver <slaver7@gmail.com> (Fork/2Moons)
- * @license http://www.gnu.org/licenses/gpl.html GNU GPLv3 License
- * @version 1.3 (2011-01-21)
- * @link http://code.google.com/p/2moons/
-
- * Please do not remove the credits
-*/
-
 $LNG['faq']                        = array(
 "<font size=3>Which raw materials are there?</font>" => "The main raw materials are metal, crystal and deuterium. These are needed for buildings, research, shipbuilding engineering and the making of national defense premises. The energy lets your raw material works work on 100%. If you should produce less energy as you needed, your work production of the raw materials is reduced.<br>",
 "<font size=3>What is the small green number under the raw materials?  </font>" => "This number indicates your bearing size. If the stores are full, your works produce no more raw materials.<br>",
